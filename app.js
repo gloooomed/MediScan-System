@@ -3,7 +3,13 @@ import cors from 'cors';
 import { spawn } from 'child_process';
 
 const app = express();
-app.use(cors());
+
+const corsOriginEnv = process.env.CORS_ORIGIN;
+const corsOptions = corsOriginEnv
+    ? { origin: corsOriginEnv.split(',').map((origin) => origin.trim()) }
+    : { origin: true };
+
+app.use(cors(corsOptions));
 app.use(express.json()); // Middleware to parse JSON requests
 
 app.post('/predict-disease', (req, res) => {

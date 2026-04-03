@@ -4,6 +4,11 @@ import spinnerLogo from '../../assets/spinner.svg'
 import symptomsList from "../../symptoms.json"
 import Report from "../Report/Report"
 
+const API_BASE_URL = (import.meta.env.VITE_API_BASE_URL || '').replace(/\/$/, '');
+const PREDICT_ENDPOINT = API_BASE_URL
+    ? `${API_BASE_URL}/predict-disease`
+    : '/api/predict-disease';
+
 function Predict() {
 
     const [showSpinner, setShowSpinner] = useState(false)
@@ -52,13 +57,18 @@ function Predict() {
         setShowSpinner(true)
         console.log(patientDetails.symptoms)
         try {
-            const response = await fetch('/api/predict-disease', {
+            const response = await fetch(PREDICT_ENDPOINT, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({ symptoms: patientDetails.symptoms })
             })
+
+            if (!response.ok) {
+                throw new Error(`Prediction request failed with status ${response.status}`)
+            }
+
             const data = await response.json();
             setDiseasePredicted(data)
             setShowSpinner(false)
