@@ -97,7 +97,7 @@ function App() {
       <Router>
         <div className='min-h-screen w-full overflow-x-hidden transition-colors duration-500 bg-background text-foreground flex flex-col font-sans'>
           <Header />
-          <main className="flex-1 w-full px-6 sm:px-10 lg:px-16 py-12">
+          <main className="flex-1 w-full px-6 sm:px-10 lg:px-16 pt-2 pb-12">
             <AnimatedRoutes />
           </main>
           <Footer />

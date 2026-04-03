@@ -14,7 +14,7 @@ function Home() {
 
     return (
         <div className="flex flex-col gap-24 pb-20 w-full">
-            <div className="relative pt-16 md:pt-24 flex flex-col items-center justify-center gap-16 w-full text-center">
+            <div className="relative pt-6 md:pt-10 flex flex-col items-center justify-center gap-16 w-full text-center">
                 
                 {/* Plus Pattern Background */}
                 <div className="absolute top-[-100px] left-1/2 -translate-x-1/2 w-[150vw] h-[1000px] z-0 pointer-events-none opacity-50 dark:opacity-40"

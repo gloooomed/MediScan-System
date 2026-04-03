@@ -8,7 +8,7 @@ function Header() {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <header className="sticky top-0 z-50 w-full backdrop-blur-lg bg-background/70 border-b border-cardBorder transition-colors duration-500 rounded-b-xl px-6 sm:px-10 lg:px-16 py-4 flex justify-between items-center mb-8 shadow-sm">
+    <header className="sticky top-0 z-50 w-full backdrop-blur-lg bg-background/70 border-b border-cardBorder transition-colors duration-500 rounded-b-xl px-6 sm:px-10 lg:px-16 py-4 flex justify-between items-center shadow-sm">
       <NavLink
         to="/"
         className="flex items-center gap-2 group"
