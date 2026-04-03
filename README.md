@@ -69,9 +69,7 @@ pip install -r requirements.txt
 
 Create a `.env` file (optional for production-style frontend API routing):
 
-```env
-VITE_API_BASE_URL=https://gloooomed-mediscan-api.hf.space
-```
+
 
 Run local development (frontend + backend):
 
