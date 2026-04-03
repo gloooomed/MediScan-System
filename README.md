@@ -24,7 +24,7 @@
    <a href="https://img.shields.io/badge/LICENSE-Not%20specified-lightgrey?style=for-the-badge&labelColor=1a1a2e">
       <img src="https://img.shields.io/badge/LICENSE-Not%20specified-lightgrey?style=for-the-badge&labelColor=1a1a2e" alt="License" />
    </a>
-   <a href="https://your-vercel-app.vercel.app">
+   <a href="https://mediscan-system.vercel.app/">
       <img src="https://img.shields.io/badge/LIVE-PAGE-blueviolet?style=for-the-badge&labelColor=1a1a2e" alt="Live Page" />
    </a>
 </p>
@@ -68,6 +68,10 @@ pip install -r requirements.txt
 ```
 
 Create a `.env` file (optional for production-style frontend API routing):
+
+```
+Your Route Here!!
+```
 
 
 
