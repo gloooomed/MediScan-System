@@ -9,8 +9,12 @@ build/
 venv/
 .venv/
 env/
+.envrc
 __pycache__/
 *.py[cod]
+
+# Local deployment workdirs
+hf-deploy/
 
 # Environment files
 .env
